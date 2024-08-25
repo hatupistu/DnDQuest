@@ -1,0 +1,251 @@
+.turn-popup {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  display: none; /* Hide the popup by default */
+}
+
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  bottom: 0; /* Stay at the bottom */
+  left: 50%; /* Center the popup horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  width: 150px; /* Adjust size as needed */
+  height: auto; /* Height adjusts based on image */
+  background-color: rgba(0, 0, 0, 0); /* Background color with transparency */
+  padding: 10px; /* Padding around the image */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.0); /* Shadow for better visibility */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+#joystickContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#joystickBackground {
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  position: absolute;
+}
+
+#joystickKnob {
+  width: 75px;
+  height: 75px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(50%, 50%); /* Center the knob in the middle of the background */
+}
+
+#interact{
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 7px;
+  width: 100px;
+  height: auto;
+  background-color: rgba(0,0,0,0);
+  padding: 10px;
+  border: 5px;
+  z-index: 1000;
+
+}
+
+#interact img{
+  width: 100px;
+  height: auto;
+}
+
+.intpopup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  bottom: 0; /* Stay at the bottom */
+  left: 60%; /* Center the popup horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  width: 40px; /* Adjust size as needed */
+  height: auto; /* Height adjusts based on image */
+  background-color: rgba(0, 0, 0, 0); /* Background color with transparency */
+  padding: 10px; /* Padding around the image */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.0); /* Shadow for better visibility */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Popup image styling */
+.popup img {
+  width: 100px; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Close button */
+.popup .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.short {
+  width: 50px; /* Adjust this value to your desired width */
+}
+
+.overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+.header {
+  text-align: center; /* Center the header text */
+  margin-top: 20px; /* Optional: Add some margin to the top */
+}
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.custom-select select {
+  display: none; /* Hide the original select element */
+}
+
+.select-selected {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.select-items div,
+.select-selected {
+  color: #000;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  z-index: 99;
+}
+
+.select-items div {
+  display: flex;
+  align-items: center;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+body { margin: 0; overflow: hidden; }
+canvas { display: block; }
+#sceneCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#overlayCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none; /* Ensures the overlay canvas doesn't interfere with mouse events */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+#gauge-container {
+  width: 200px;
+  height: 20px;
+  background-color: #333;
+  border: 2px solid #000;
+  position: fixed;
+  top: 180px;
+  left: 20px;
+}
+
+#gauge-bar {
+  width: 100%;
+  height: 100%;
+  background-color: #00ff00;
+}

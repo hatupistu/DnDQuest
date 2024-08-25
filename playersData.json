@@ -1,0 +1,110 @@
+{
+  "0": {
+    "id": 1,
+    "x": 16.47999048019305,
+    "y": -7.023000000000001,
+    "z": 4.472591109068184,
+    "direction": -10.089999999999982,
+    "canfly": false,
+    "flybar": 100,
+    "color": 0,
+    "action": "none",
+    "time": 1.42,
+    "freeMove": 0,
+    "hang": false,
+    "freezeSpot": {
+      "0": 0,
+      "1": 1,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "token": "pALLY",
+    "saveGame": true,
+    "invis": false,
+    "tkn": "pALLY"
+  },
+  "1": {
+    "id": 2,
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "direction": 0,
+    "canfly": false,
+    "flybar": 100,
+    "color": 0,
+    "action": "none",
+    "time": 0,
+    "freeMove": 0,
+    "hang": false,
+    "freezeSpot": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "token": "wZARD",
+    "saveGame": true,
+    "invis": false
+  },
+  "2": {
+    "id": 3,
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "direction": 0,
+    "canfly": false,
+    "flybar": 100,
+    "color": 0,
+    "action": "none",
+    "time": 0,
+    "freeMove": 0,
+    "hang": false,
+    "freezeSpot": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "token": "tnAkrE",
+    "saveGame": true,
+    "invis": false
+  },
+  "3": {
+    "id": 4,
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "direction": 0,
+    "canfly": false,
+    "flybar": 100,
+    "color": 0,
+    "action": "none",
+    "time": 0,
+    "freeMove": 0,
+    "hang": false,
+    "freezeSpot": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "token": "cRLEic",
+    "saveGame": true,
+    "invis": false
+  },
+  "admin": {
+    "id": 5,
+    "x": -4.1035639217065025,
+    "y": 17.383911260872793,
+    "z": -8.561675718971252,
+    "direction": 3.6250000000000018
+  }
+}

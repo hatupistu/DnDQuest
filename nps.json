@@ -1,0 +1,18 @@
+{
+  "0": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "action": "none",
+    "name": "elevator"
+  },
+  "10": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "direction": 0,
+    "name": "vic",
+    "action": "idle",
+    "health": 120
+  }
+}

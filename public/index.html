@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="importmap">
+      {
+          "imports": {
+              "three": "https://unpkg.com/three@v0.153.0/build/three.module.js","three/addons/": "https://unpkg.com/three@v0.153.0/examples/jsm/"
+          }
+      }</script>
+  <script>(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()</script>
+  <title>------DND session----</title>
+  <style>
+  body { margin: 0; }
+  canvas { display: block; }
+  #distanceOverlay {
+      position: absolute;
+      top: 280px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+  }
+</style>
+  <link rel="stylesheet" href="overlay_stuff.css">
+</head>
+<body>
+  <h1>...........DnD Session</h1>
+  <div id="controls">
+    <input type="text" id="cube-name">
+    <button id="clear">Clear</button>
+    <button id="yes-btn">Yes</button>
+    <button id="no-btn">No</button>
+    <button id='isTurn'>End</button>
+    <button id='open'>Open</button>
+    <button id='close'>Close</button>
+    <button id = 'jump'>Jump</button>
+    <button id='pickup'>Pickup</button>
+    <button id="attack">Attack</button>
+    <button id="invis">NPCInvis</button>
+    <button id="vic">vic</button>
+    <button id="livic">livic</button>
+    <button id='P1'>P1</button>
+    <button id='P2'>P2</button>
+    <button id='P3'>P3</button>
+    <button id='P4'>P4</button>
+
+</div>
+<div id="player controls">
+  <label for="x-coord" class="red">X: </label>
+  <input type="number" id="x-coord" class="short" step="0.1" value="0">
+  <label for="y-coord" class="green">Y: </label>
+  <input type="number" id="y-coord" class="short" step="0.1" value="0">
+  <label for="z-coord" class="blue">Z: </label>
+  <input type="number" id="z-coord" class="short" step="0.1" value="0">
+  <label for="color-select">Color: </label>
+  <select id="color-select">
+    <option value=0>Red</option>
+    <option value=1>Green</option>
+    <option value=2>Blue</option>
+    <option value=3>Yellow</option>
+    <option value=4>Magenta</option>
+    <option value=5>Cyan</option>
+    <option value=6>White</option>
+    <option value=7>Orange</option>
+    <option value=8>Grey</option>
+    <option value=9>Brown</option>
+    <option value=10>Violet</option>
+    <option value=11>Peach</option>
+    <option value=12>Black</option>
+    <option value=13>Orange Red</option>
+    <option value=14>Lime Green</option>
+    <option value=15>Dodger Blue</option>
+    <option value=16>Deep Pink</option>
+    <option value=17>Dark Turquoise</option>
+    <option value=18>Dark Violet</option>
+    <option value=19>Dark Khaki</option>
+    <option value=20>Dark Orange</option>
+  </select>         
+
+  <label id="whichHand"> Left handed</label>
+  <label class="switch">
+    <input type="checkbox" id="hand">
+    <span class="slider"></span>
+</label>
+</div>
+<label for='whichPlayer'>which</label>
+<input id='whichPlayer' class ='short' value ='0'>
+  <div id="devType">Initial Data</div>
+</div>
+<div id="popup" class="popup">
+  <img id="popup" src="map/yourturn.png" alt="Popup Image">
+</div>
+<div id="interact" class="button">
+  <img id = "interactimg" src="map/button_jump.png" alt="Interact Image">
+</div>
+<div id="int-popup" class="intpopup">
+  <img id="int-popup" src="map/interact.png" alt="Int-Popup Image">
+</div>
+<div id="gauge-container">
+  <div id="gauge-bar"></div>
+</div>
+<div id="joystickContainer" style="display: none;">
+  <div id="joystickBackground"></div>
+  <div id="joystickKnob"></div>
+</div>
+<div id="distanceOverlay">Distance: <span id="distance">0.00</span></div>
+  <script src="socket.io.js"></script>
+  <script type='module' src="index.js"></script>
+</body>
+</html>
